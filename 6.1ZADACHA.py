@@ -21,11 +21,10 @@ class Animal:
         self.name = name
 
     def eat(self, food):
-        self.food = Plant
-        if Plant.edible == True:
+        if food.edible == True:
             Animal.fed = True
             print(f'{self.name} съел {food.name}')
-        if Plant.edible == False:
+        if food.edible == False:
             Animal.alive = False
             print(f'{self.name} не стал есть {food.name}')
 
@@ -52,4 +51,3 @@ a1.eat(p1)
 a2.eat(p2)
 print(f'{a1.name} жив: {a1.alive}')
 print(f'{a2.name} сытый: {a2.fed}')
-
